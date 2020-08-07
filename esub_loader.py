@@ -81,17 +81,6 @@ def get_total_list(xml_file):
     """
     # extract filename from path
     xml_file_name = ntpath.basename(xml_file)
-
     total_list = (xml_file_name, get_rl_id(xml_file), get_p_id(xml_file),
                 get_nil(xml_file, 'false'), get_report_list(xml_file))
-
     return total_list
-
-
-if __name__ == '__main__':
-    # # print(get_rl_id('d:\\PROG\\MAS SUB_TESTER\\test_data\\MAS1003 RL11_Q_20190331.xml'))
-    # # print(get_p_id('d:\\PROG\\MAS SUB_TESTER\\test_data\\MAS1003 RL11_Q_20190331.xml'))
-    # # print(get_nil('data/MAS610_RL08_A_20190331.xml', 'all'))
-    # # print(get_nil('data/MAS610_RL08_A_20190331.xml', 'true'))
-    # # print(get_nil('data/MAS610_RL08_A_20190331.xml', 'false'))
-    # print(get_total_list('data/MAS610_RL08_A_20190331.xml'))
