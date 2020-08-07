@@ -51,13 +51,3 @@ def get_ethalon_list(rl_id, p_id, input_file):
     dict_key = rl_id + '-' + p_id
     ethalon_list = report_dict_builder(load_f(input_file))
     return ethalon_list.get(dict_key)
-
-
-
-if __name__ == '__main__':
-    # a = load_f('test_data/0.data')
-    # # print(a)
-    # b = report_dict_builder(a)
-    # print(b)
-    a = get_ethalon_list('RL08', 'M', 'data/0.data')
-    print(a)
