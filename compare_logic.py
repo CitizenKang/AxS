@@ -21,7 +21,7 @@ def compareit(list_1, list_2):
         element_more = report_list_2 - report_list_1
         element_less = report_list_1 - report_list_2
 
-        #if difference is present form string answer
+        # if difference is present form string answer
         if len(element_more) > 0:
             element_more = list(element_more)
             result_more = ('+:' + ', '.join(element_more))
@@ -29,10 +29,11 @@ def compareit(list_1, list_2):
             result_more = ''
         if len(element_less) > 0:
             element_less = list(element_less)
-            result_less = ('-:'+', '.join(element_less))
+            result_less = ('-:' + ', '.join(element_less))
         else:
             result_less = ''
     return (result_more + ' ' + result_less).lstrip()
+
 
 def combine_list(xml_file, ethalon_file):
     """
@@ -43,16 +44,17 @@ def combine_list(xml_file, ethalon_file):
     benchmark_list = get_ethalon_list(list_reports[1], list_reports[2], ethalon_file)
 
     combined_dict = {
-    'file name' : list_reports[0],
-    'Reporting level, Perodicity': list_reports[1] + ' ' + list_reports[2],
-    'Benchmark list of reports' : benchmark_list,
-    'Nil_Form list' : list_reports[3],
-    'List of reports' : list_reports[4],
-    'Nil_Form --> Benchmark' : compareit(benchmark_list, list_reports[3]),
-    'List of reports --> Benchmark' : compareit(benchmark_list, list_reports[4]),
-    'List of reports --> Nil_Form' : compareit(list_reports[3], list_reports[4])
+        'file name': list_reports[0],
+        'Reporting level, Perodicity': list_reports[1] + ' ' + list_reports[2],
+        'Benchmark list of reports': benchmark_list,
+        'Nil_Form list': list_reports[3],
+        'List of reports': list_reports[4],
+        'Nil_Form --> Benchmark': compareit(benchmark_list, list_reports[3]),
+        'List of reports --> Benchmark': compareit(benchmark_list, list_reports[4]),
+        'List of reports --> Nil_Form': compareit(list_reports[3], list_reports[4])
     }
     return combined_dict
+
 
 if __name__ == "__main__":
     print(combine_list('data/MAS610_RL08_A_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
@@ -63,3 +65,4 @@ if __name__ == "__main__":
     print(combine_list('data/MAS610_RL05_H_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
     print(combine_list('data/MAS610_RL08_H_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
     print(combine_list('data/MAS610_RL08_M_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
+    
