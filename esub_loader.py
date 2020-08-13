@@ -84,3 +84,8 @@ def get_total_list(xml_file):
     total_list = (xml_file_name, get_rl_id(xml_file), get_p_id(xml_file),
                 get_nil(xml_file, 'false'), get_report_list(xml_file))
     return total_list
+
+if __name__ == '__main__':
+
+    a = get_nil('INPUT/MAS610_RL08_A_20190331.xml')
+    print(a)

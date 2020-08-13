@@ -45,7 +45,7 @@ def combine_list(xml_file, ethalon_file):
 
     combined_dict = {
         'file name': list_reports[0],
-        'Reporting level, Perodicity': list_reports[1] + ' ' + list_reports[2],
+        'RL_ID, P_ID': list_reports[1] + ' ' + list_reports[2],
         'Benchmark list of reports': benchmark_list,
         'Nil_Form list': list_reports[3],
         'List of reports': list_reports[4],
@@ -57,12 +57,11 @@ def combine_list(xml_file, ethalon_file):
 
 
 if __name__ == "__main__":
-    print(combine_list('data/MAS610_RL08_A_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
-    print(combine_list('data/MAS610_RL02_A_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
-    print(combine_list('data/MAS610_RL02_M_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
-    print(combine_list('data/MAS610_RL02_Q_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
-    print(combine_list('data/MAS610_RL03_H_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
-    print(combine_list('data/MAS610_RL05_H_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
-    print(combine_list('data/MAS610_RL08_H_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
-    print(combine_list('data/MAS610_RL08_M_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
-    
+    print(combine_list('D://Prog//e_sub_test//MAS610_RL03_Q_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
+    # print(combine_list('data/MAS610_RL02_A_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
+    # print(combine_list('data/MAS610_RL02_M_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
+    # print(combine_list('data/MAS610_RL02_Q_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
+    # print(combine_list('data/MAS610_RL03_H_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
+    # print(combine_list('data/MAS610_RL05_H_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
+    # print(combine_list('data/MAS610_RL08_H_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
+    # print(combine_list('data/MAS610_RL08_M_20190331.xml', 'data/0.data').get('List of reports --> Benchmark'))
